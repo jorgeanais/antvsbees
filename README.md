@@ -14,8 +14,13 @@ clasificador-hormigas-abejas/
 ├── docker-compose.yml
 ├── celda_exportar_modelo.py   # celda para el notebook
 └── model/
-    └── modelo_hormigas_abejas.pth   # <- lo generas desde el notebook
+    └── modelo_hormigas_abejas.pth   # generado localmente desde el notebook
 ```
+
+> El archivo `model/modelo_hormigas_abejas.pth` no está incluido en el repositorio
+> porque es demasiado grande. Debes ejecutar `Notebook_Transfer_Learning.ipynb`,
+> correr al final la celda de `celda_exportar_modelo.py` y generar ese archivo
+> dentro de `model/` antes de ejecutar la aplicación o construir la imagen Docker.
 
 ## 1. Exportar el modelo desde el notebook
 Ejecuta la celda de `celda_exportar_modelo.py` al final del notebook
