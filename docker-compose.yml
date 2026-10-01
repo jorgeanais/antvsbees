@@ -1,0 +1,11 @@
+services:
+  clasificador:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - MODEL_PATH=/app/model/modelo_hormigas_abejas.pth
+    # Descomenta para cambiar el modelo sin reconstruir la imagen:
+    # volumes:
+    #   - ./model:/app/model:ro
+    restart: unless-stopped
